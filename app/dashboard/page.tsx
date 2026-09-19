@@ -19,12 +19,10 @@ import {
   ChevronRight,
   ShieldAlert,
 } from 'lucide-react';
+import CareerAgentChat from '@/components/CareerAgentChat';
 
 export default function DashboardPage() {
-  const { user, updateTargetRole } = useAuth();
-  const [agentQuestion, setAgentQuestion] = useState('');
-  const [agentResponse, setAgentResponse] = useState<string | null>(null);
-  const [isAgentThinking, setIsAgentThinking] = useState(false);
+  const { user } = useAuth();
 
   const profile = user || {
     name: 'Somnath',
@@ -34,30 +32,6 @@ export default function DashboardPage() {
     evidenceStrength: 61,
     skillCoverage: 72,
     weeklyHoursCommitment: 8,
-  };
-
-  const handleAgentAsk = async (query: string) => {
-    setIsAgentThinking(true);
-    setAgentResponse(null);
-    setAgentQuestion(query);
-
-    // Simulate Bedrock tool-calling execution
-    await new Promise((r) => setTimeout(r, 900));
-
-    if (query.includes('Why am I not ready') || query.includes('why')) {
-      setAgentResponse(
-        `Based on your verified graph: Your strongest demonstrable evidence is in Python (82%), Linux (79%), and AWS Core (64%). However, for ${profile.targetRole}, you have critical unverified gaps in AWS IAM (31%), Terraform (9%), and SIEM Monitoring (18%). Mastering Terraform has the highest systemic leverage (1.6x) because it unlocks declarative cloud security deployments required across 3 downstream competencies.`
-      );
-    } else if (query.includes('5 hours') || query.includes('hours')) {
-      setAgentResponse(
-        `Dynamic Constraint Recalculation (5 hrs/week): Compressing 30-day scope to focus exclusively on the #1 leverage node (Terraform + core IAM policy boundaries). Moving the multi-account GuardDuty automation into Month 2. Your adjusted weekly timetable is now ready on the 30-Day Sprint page.`
-      );
-    } else {
-      setAgentResponse(
-        `Grounded Analysis for ${profile.targetRole}: Target role requires 82% IAM demand and 61% Terraform demand. Closing these two gaps will boost your Career Readiness from 68% to 84%. Recommended next action: Open your 30-Day Sprint roadmap.`
-      );
-    }
-    setIsAgentThinking(false);
   };
 
   return (
@@ -268,99 +242,8 @@ export default function DashboardPage() {
       </div>
 
       {/* Bedrock AI Career Agent Interactive Console (GoThrough § 10, § 17) */}
-      <div id="agent-drawer" className="glass-panel" style={{ padding: '2rem', border: '1px solid rgba(139, 92, 246, 0.3)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-          <div style={{ width: '36px', height: '36px', borderRadius: '8px', backgroundColor: 'rgba(139, 92, 246, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Bot size={20} color="#C4B5FD" />
-          </div>
-          <div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#F1F5F9' }}>
-              Amazon Bedrock Career Agent
-            </h3>
-            <span style={{ fontSize: '0.8rem', color: '#A78BFA' }}>
-              Tool Grounding Active: <code>get_skill_graph</code>, <code>get_market_data</code>, <code>get_gap_analysis</code>
-            </span>
-          </div>
-        </div>
-
-        {/* Suggested Quick Questions */}
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
-          <button
-            onClick={() => handleAgentAsk('Why am I not ready for this role?')}
-            className="btn-secondary"
-            style={{ fontSize: '0.85rem', padding: '0.45rem 0.85rem' }}
-          >
-            ❓ "Why am I not ready?"
-          </button>
-          <button
-            onClick={() => handleAgentAsk('What happens if I only have 5 hours per week?')}
-            className="btn-secondary"
-            style={{ fontSize: '0.85rem', padding: '0.45rem 0.85rem' }}
-          >
-            ⏱️ "What if I only have 5 hours/week?"
-          </button>
-          <button
-            onClick={() => handleAgentAsk('What is my single highest-leverage gap?')}
-            className="btn-secondary"
-            style={{ fontSize: '0.85rem', padding: '0.45rem 0.85rem' }}
-          >
-            🎯 "What is my highest-leverage gap?"
-          </button>
-        </div>
-
-        {/* Agent Response Box */}
-        {isAgentThinking && (
-          <div style={{ padding: '1.25rem', backgroundColor: 'rgba(139, 92, 246, 0.08)', borderRadius: '8px', border: '1px solid rgba(139, 92, 246, 0.2)', color: '#C4B5FD', fontSize: '0.95rem' }}>
-            <Sparkles size={16} className="animate-spin" style={{ display: 'inline', marginRight: '0.5rem' }} />
-            Bedrock agent executing grounded tools on your skill graph...
-          </div>
-        )}
-
-        {agentResponse && !isAgentThinking && (
-          <div style={{
-            padding: '1.5rem',
-            backgroundColor: 'rgba(139, 92, 246, 0.1)',
-            borderRadius: '10px',
-            border: '1px solid rgba(139, 92, 246, 0.3)',
-            marginBottom: '1.25rem',
-          }}>
-            <div style={{ fontSize: '0.8rem', color: '#A78BFA', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '0.5rem' }}>
-              Evidence-Backed Reasoning:
-            </div>
-            <p style={{ color: '#F8FAFC', fontSize: '0.95rem', lineHeight: 1.6 }}>
-              {agentResponse}
-            </p>
-          </div>
-        )}
-
-        {/* Custom Input */}
-        <div style={{ display: 'flex', gap: '0.75rem' }}>
-          <input
-            type="text"
-            value={agentQuestion}
-            onChange={(e) => setAgentQuestion(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && agentQuestion && handleAgentAsk(agentQuestion)}
-            placeholder="Ask the Career Agent about your gaps, market alignment, or sprint planning..."
-            style={{
-              flex: 1,
-              padding: '0.75rem 1rem',
-              backgroundColor: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid var(--border-subtle)',
-              borderRadius: '8px',
-              color: 'var(--text-primary)',
-              fontSize: '0.95rem',
-              outline: 'none',
-            }}
-          />
-          <button
-            onClick={() => agentQuestion && handleAgentAsk(agentQuestion)}
-            disabled={isAgentThinking || !agentQuestion}
-            className="btn-primary"
-            style={{ padding: '0.75rem 1.25rem' }}
-          >
-            <Send size={16} /> Ask
-          </button>
-        </div>
+      <div id="agent-drawer">
+        <CareerAgentChat targetRole={profile.targetRole} />
       </div>
     </div>
   );

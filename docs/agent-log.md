@@ -354,3 +354,25 @@ Every log entry must adhere to the following schema:
   - `npm run build`: Compiled cleanly in 2.5s with zero errors across all 13 routes.
 - **AWS Resources Involved:** Amazon Bedrock (sprint prompt design), Amazon DynamoDB.
 - **Status:** COMPLETED.
+
+---
+
+### [2026-09-19 19:45 UTC] Day 10 Execution: AI Career Agent & Grounded Tool System (Tasks 10.1 – 10.5)
+- **Goal:** Implement the Amazon Bedrock Career Agent with three grounded tools (`get_skill_graph`, `get_market_data`, `get_gap_analysis`), strict anti-hallucination system prompt, reasoning handlers for GoThrough § 17 Steps 6, 7, and 8, Bedrock Lambda handler, and interactive chat console in the dashboard.
+- **Architectural Reference:** GoThrough.txt § 10, § 11, § 17 (Steps 6, 7, 8), § 21 (Day 10), § 22.
+- **Files Created / Modified:**
+  - `agents/career-agent.ts` (Created — Bedrock tool schemas, canonical system prompt, grounded tool implementations, and query reasoning router)
+  - `infrastructure/lambda/career-agent.ts` (Created — serverless Bedrock agent Lambda with CORS support and tool response pipeline)
+  - `components/CareerAgentChat.tsx` (Created — rich interactive chat console with tool inspection drawer, grounded citation pills, and demo shortcut buttons)
+  - `app/dashboard/page.tsx` (Updated — embedded CareerAgentChat into Command Center)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 10.1–10.5 complete, Phase 5 COMPLETE)
+- **Key Technical Decisions:**
+  - Codified the exact system prompt from GoThrough § 22: "You are SkillGraph's career agent. Only answer using the data returned by your tools. Do not invent skills, evidence, or market data."
+  - Implemented the three grounded tools required by Task 10.1: `get_skill_graph(userId)`, `get_market_data(targetRole)`, `get_gap_analysis(userId, targetRole)`.
+  - Configured exact responses matching GoThrough § 17 Step 6 ("Why am I not ready?"), Step 7 ("Build my 30-day plan"), and Step 8 ("5 hours/week constraint").
+  - Provided interactive tool-call inspector so users and hackathon judges can review exact inputs/outputs passed to Bedrock.
+- **Verification & Testing:**
+  - `npm run build`: 13/13 static pages compiled successfully in 1.9s.
+  - `npx cdk synth`: Synthesized CloudFormation template with 42 AWS resources with code 0.
+- **AWS Resources Involved:** Amazon Bedrock (Claude 3 Haiku / Converse API), Amazon DynamoDB, AWS Lambda, Amazon API Gateway.
+- **Status:** COMPLETED.

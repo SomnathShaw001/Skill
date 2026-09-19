@@ -229,14 +229,14 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 ### ─────────────────────────────────────
 
 #### DAY 10 — Career Agent (GoThrough.txt § 21 / DAY 10 + §10)
-- [ ] **10.1** Bedrock agent with three grounded tools:
+- [x] **10.1** Bedrock agent with three grounded tools:
   - `get_skill_graph(userId)` — returns user's actual skill + evidence data
   - `get_market_data(targetRole)` — returns market demand + trend
   - `get_gap_analysis(userId, targetRole)` — returns prioritized gap list
-- [ ] **10.2** Agent system prompt: "You are SkillGraph's career agent. Only answer using the data returned by your tools. Do not invent skills, evidence, or market data."
-- [ ] **10.3** "Why am I not ready?" question → agent calls tools → evidence-backed answer (see §17 Step 6 example)
-- [ ] **10.4** "Build my 30-day plan" → agent calls tools → grounded plan
-- [ ] **10.5** Agent chat UI embedded in dashboard
+- [x] **10.2** Agent system prompt: "You are SkillGraph's career agent. Only answer using the data returned by your tools. Do not invent skills, evidence, or market data."
+- [x] **10.3** "Why am I not ready?" question → agent calls tools → evidence-backed answer (see §17 Step 6 example)
+- [x] **10.4** "Build my 30-day plan" → agent calls tools → grounded plan
+- [x] **10.5** Agent chat UI embedded in dashboard
 
 **Acceptance check:** Agent answers "Why am I not ready?" with only data present in DynamoDB. Agent does not hallucinate skills or market figures.
 
@@ -295,11 +295,11 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 
 ## 📍 Current Checkpoint
 
-**Status:** Phase 4 COMPLETE (Days 8 & 9 — Gap & Roadmap Engines: Career Gap calculation, Dependency & Leverage Traversal with 3.2x multiplier, Learn → Build → Prove sprint generation, 5 hrs/week constraint recalculation verified via build).
+**Status:** Phase 5 COMPLETE (Day 10 — AI Career Agent: Bedrock tool definitions, strict anti-hallucination system prompt, Step 6/7/8 query handlers, CareerAgentChat UI embedded in Command Center, verified via build and CDK synthesis).
 
-**Next authorized task:** `10.1` — Bedrock agent with three grounded tools: `get_skill_graph(userId)`, `get_market_data(targetRole)`, `get_gap_analysis(userId, targetRole)` (Phase 5 / Day 10: AI Career Agent).
+**Next authorized task:** `11.1` — Security & Isolation Verification (Phase 6 / Day 11: Security + Testing).
 
-**Waiting for:** User authorization to proceed to Phase 5 (Day 10: AI Career Agent).
+**Waiting for:** User authorization to proceed to Phase 6 (Days 11–13: Security, Production & Pitch).
 
 ---
 
