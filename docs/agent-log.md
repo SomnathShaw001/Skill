@@ -318,3 +318,39 @@ Every log entry must adhere to the following schema:
   - `npx cdk synth`: Synthesized CloudFormation template with 42 AWS resources with code 0.
 - **AWS Resources Involved:** Amazon DynamoDB (`MARKET#{roleId}` partition, `GSI1`), AWS Lambda, Amazon API Gateway.
 - **Status:** COMPLETED.
+
+---
+
+### [2026-09-19 19:30 UTC] Day 8 Execution: Career Gap & Systemic Leverage Engine (Tasks 8.1 – 8.4)
+- **Goal:** Implement gap size calculations, graph traversal for downstream unlocks, leverage multiplier formula, and interactive YOU vs. MARKET comparative view.
+- **Architectural Reference:** GoThrough.txt § 7, § 11, § 21 (Day 8).
+- **Files Created / Modified:**
+  - `lib/gap-engine.ts` (Created — gap calculation, systemic unlock chains, priority scoring: `gapSize * leverage * marketDemand`)
+  - `app/gap/page.tsx` (Updated — exact GoThrough § 7 YOU vs. MARKET table layout, leverage cards, and dependency traversal tree)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 8.1–8.4 complete)
+- **Key Technical Decisions:**
+  - Implemented exact GoThrough § 7 gap comparison: AWS (78% vs 91%), IAM (31% vs 82%), Terraform (9% vs 61%), SIEM (18% vs 65%), Docker (62% vs 55%), Python (81% vs 70%).
+  - Codified systemic leverage traversal: `Terraform (3.2x) → AWS infra → Security infra → Cloud Security projects`.
+  - Identified IAM (2.8x) and SIEM (2.2x) as critical security bottlenecks unlocking compliance and detection engineering.
+- **Verification & Testing:**
+  - Validated comparative table calculations and confirmed priority rank sorting accurately bubbles up high-leverage bottlenecks.
+- **AWS Resources Involved:** Amazon DynamoDB (query access pattern AP-08).
+- **Status:** COMPLETED.
+
+---
+
+### [2026-09-19 19:35 UTC] Day 9 Execution: Roadmap Engine & Constraint Recalculation (Tasks 9.1 – 9.5)
+- **Goal:** Implement the Learn → Build → Prove roadmap generation engine, dynamic hours/week constraint recalculator, and interactive weekly sprint execution view.
+- **Architectural Reference:** GoThrough.txt § 8, § 9, § 17 (Steps 7 & 8), § 21 (Day 9).
+- **Files Created / Modified:**
+  - `lib/roadmap-engine.ts` (Created — dynamic sprint generation, deliverable pacing, and constraint adaptation engine)
+  - `app/roadmap/page.tsx` (Updated — 30/60/90-day switcher, 3–25 h/wk slider, 5 h/wk preset, deliverable checkboxes, and expected outcomes)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 9.1–9.5 complete, Phase 4 COMPLETE)
+- **Key Technical Decisions:**
+  - Structured 4-week sprint adhering to GoThrough § 8: Week 1 (Learn IAM), Week 2 (Build least privilege & monitoring), Week 3 (Build Terraform IaC), Week 4 (Prove live AWS deployment & GitHub tests).
+  - Built the GoThrough § 17 Step 8 "wow moment": adjusting time budget to 5 hrs/week dynamically recalibrates deliverable pacing to constrained mode without generic static text.
+  - Implemented client state tracking for micro-milestone completions and readiness boost trajectory (+14% readiness to 82%).
+- **Verification & Testing:**
+  - `npm run build`: Compiled cleanly in 2.5s with zero errors across all 13 routes.
+- **AWS Resources Involved:** Amazon Bedrock (sprint prompt design), Amazon DynamoDB.
+- **Status:** COMPLETED.

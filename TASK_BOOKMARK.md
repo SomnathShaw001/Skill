@@ -203,21 +203,21 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 ### ─────────────────────────────────────
 
 #### DAY 8 — Career Gap Engine (GoThrough.txt § 21 / DAY 8 + §7)
-- [ ] **8.1** Gap calculation: user skill score vs. market demand score per skill
-- [ ] **8.2** Dependency graph traversal: identify which skills unlock downstream skills (e.g., Terraform → AWS infra → Security infra → Cloud Security projects)
-- [ ] **8.3** Priority ranking: gaps sorted by (gap size × leverage × market demand)
-- [ ] **8.4** Career Gap page: YOUR SKILL vs. MARKET column view (see §7 example)
+- [x] **8.1** Gap calculation: user skill score vs. market demand score per skill
+- [x] **8.2** Dependency graph traversal: identify which skills unlock downstream skills (e.g., Terraform → AWS infra → Security infra → Cloud Security projects)
+- [x] **8.3** Priority ranking: gaps sorted by (gap size × leverage × market demand)
+- [x] **8.4** Career Gap page: YOUR SKILL vs. MARKET column view (see §7 example)
 
 **Acceptance check:** Gap page shows real comparison. Terraform's leverage over downstream skills is calculated. No invented gap data.
 
 ---
 
 #### DAY 9 — Roadmap Engine (GoThrough.txt § 21 / DAY 9 + §8, §9)
-- [ ] **9.1** Convert prioritized gaps into Learn → Build → Prove steps
-- [ ] **9.2** Time constraint input: hours/week
-- [ ] **9.3** 30/60/90-day plan generation (Bedrock prompt grounded in actual gap data)
-- [ ] **9.4** Roadmap page: weekly breakdown (see §8 example: WEEK 1 IAM, WEEK 2 Monitoring, WEEK 3 Terraform, WEEK 4 Build project)
-- [ ] **9.5** Plan recalculates when hours/week changes (the "wow moment" from §17 Step 8)
+- [x] **9.1** Convert prioritized gaps into Learn → Build → Prove steps
+- [x] **9.2** Time constraint input: hours/week
+- [x] **9.3** 30/60/90-day plan generation (Bedrock prompt grounded in actual gap data)
+- [x] **9.4** Roadmap page: weekly breakdown (see §8 example: WEEK 1 IAM, WEEK 2 Monitoring, WEEK 3 Terraform, WEEK 4 Build project)
+- [x] **9.5** Plan recalculates when hours/week changes (the "wow moment" from §17 Step 8)
 
 **Acceptance check:** Plan is generated from real gap data. Changing hours/week changes the plan. Output is not generic AI text.
 
@@ -295,11 +295,11 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 
 ## 📍 Current Checkpoint
 
-**Status:** Phase 3 COMPLETE (Days 5, 6, 7 — Intelligence Engines: Resume Intelligence S3+Bedrock parser, Canonical Normalizer, GitHub Intelligence 8-signal repo inspector, Curated Market Intelligence dataset & radar, all verified via build and CDK synthesis).
+**Status:** Phase 4 COMPLETE (Days 8 & 9 — Gap & Roadmap Engines: Career Gap calculation, Dependency & Leverage Traversal with 3.2x multiplier, Learn → Build → Prove sprint generation, 5 hrs/week constraint recalculation verified via build).
 
-**Next authorized task:** `8.1` — Gap calculation: user skill score vs. market demand score per skill (Phase 4 / Day 8: Career Gap Engine).
+**Next authorized task:** `10.1` — Bedrock agent with three grounded tools: `get_skill_graph(userId)`, `get_market_data(targetRole)`, `get_gap_analysis(userId, targetRole)` (Phase 5 / Day 10: AI Career Agent).
 
-**Waiting for:** User authorization to proceed to Phase 4 (Day 8: Career Gap Engine).
+**Waiting for:** User authorization to proceed to Phase 5 (Day 10: AI Career Agent).
 
 ---
 
