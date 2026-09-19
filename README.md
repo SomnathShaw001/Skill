@@ -5,19 +5,31 @@
 [![AWS Zero to Shipped](https://img.shields.io/badge/AWS%20Hackathon-Zero%20to%20Shipped-orange?logo=amazon-aws)](https://builder.aws.com)
 [![Lane](https://img.shields.io/badge/Lane-%23startup-blue)](#)
 [![Tag](https://img.shields.io/badge/Category-%23commercial--potential-green)](#)
+[![Security Audit](https://img.shields.io/badge/Security%20Audit-11%2F11%20PASSED-emerald)](#)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
 ## 💡 What is SkillGraph?
 
-SkillGraph is an AI-powered career intelligence platform built during the **AWS Zero to Shipped Hackathon (September 18 – October 2, 2026)**.
+SkillGraph is an AI-powered career intelligence platform built for the **AWS Zero to Shipped Hackathon (September 18 – October 2, 2026)** in the `#startup` lane and `#commercial-potential` category.
 
 It answers one foundational question:
 
 > **"Given what I can actually prove today and what the market is asking for, what should I do next?"**
 
-SkillGraph measures what you can **demonstrate**, not merely what you **claim**, compares demonstrable evidence against live market demand, identifies critical leverage skills, and generates a personalized 30-day "Learn → Build → Prove" execution sprint.
+SkillGraph measures what you can **demonstrate**, not merely what you **claim**, compares demonstrable evidence against live market demand, identifies critical systemic leverage bottlenecks, and generates a personalized 30-day "Learn → Build → Prove" execution sprint that dynamically recalibrates to your weekly time constraints.
+
+---
+
+## 🌐 Live AWS Deployment Proof
+
+- **Public HTTPS API & Health Endpoint:**  
+  [`https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/`](https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/)
+- **AWS Connection Proof & CLI Verification:**  
+  See [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md)
+- **Local Application URL:**  
+  `http://localhost:3000`
 
 ---
 
@@ -27,45 +39,46 @@ SkillGraph measures what you can **demonstrate**, not merely what you **claim**,
 Understand Me → Understand Market → Find Gap → Tell Me What to Do → Prove I Improved
 ```
 
-1. **Understand Me:** S3 resume upload + Bedrock extraction + GitHub multi-repo evidence analysis.
-2. **Understand Market:** Curated job market demand data & trend velocity.
-3. **Find Gap:** Algorithmic gap detection with dependency leverage weighting (e.g., how Terraform unlocks downstream cloud security capabilities).
-4. **Tell Me What to Do:** 30-Day "Learn → Build → Prove" sprints dynamically budgeted by your weekly hours.
-5. **Prove I Improved:** Code commits and portfolio projects update the graph in real time.
+1. **Understand Me:** S3 resume upload + Amazon Bedrock extraction + GitHub 8-signal repository analysis.
+2. **Understand Market:** Curated job market demand data & trend velocity (CC BY 4.0 / O*NET).
+3. **Find Gap:** Algorithmic gap detection with dependency leverage weighting (e.g., how Terraform unlocks 3 downstream capabilities with a 3.2x multiplier).
+4. **Tell Me What to Do:** 30-Day "Learn → Build → Prove" sprints dynamically budgeted by your weekly hours (including the 5 hrs/week constraint recalculation).
+5. **Prove I Improved:** Code commits and portfolio projects update the graph in real time, lifting Career Readiness from 68% to 82%.
 
 ---
 
 ## 🏗️ Architecture & AWS Services
 
-SkillGraph is built on a serverless AWS infrastructure:
+SkillGraph is built on a serverless, decoupled AWS infrastructure:
 
-- **Frontend:** Next.js (App Router) + Modern Dark Design System
+- **Frontend:** Next.js 15 (App Router) + Pure Vanilla CSS design tokens (deep obsidian dark mode, glassmorphism)
 - **Authentication:** AWS Cognito (User Pools & JWT Verification)
-- **API Management:** Amazon API Gateway (REST API with Cognito Authorizer)
-- **Compute:** AWS Lambda (Node.js & Python Microservices)
-- **Database:** Amazon DynamoDB (Single-Table Design: `SkillGraphTable`)
-- **Storage:** Amazon S3 (Encrypted Document & Resume Ingestion)
-- **AI & Reasoning:** Amazon Bedrock (Foundation Models & Tool-Calling Career Agent)
-- **Decoupled Pipelines:** Amazon EventBridge + Amazon SQS
+- **API Management:** Amazon API Gateway (REST API with Cognito Authorizer & Rate Throttling)
+- **Compute:** AWS Lambda (Node.js 20 ARM64 Microservices)
+- **Database:** Amazon DynamoDB (Single-Table Design: `SkillGraphTable`, `GSI1`)
+- **Storage:** Amazon S3 (Encrypted Document & Resume Ingestion Bucket)
+- **AI & Reasoning:** Amazon Bedrock (`anthropic.claude-3-haiku` with 3 grounded tools: `get_skill_graph`, `get_market_data`, `get_gap_analysis`)
 - **Observability:** Amazon CloudWatch (Logs, Metrics, Alarms)
 
 ---
 
-## 📂 Repository Structure (GoThrough.txt § 20)
+## 📂 Project Documentation Index
 
-```text
-skillgraph/
-├── app/              # Next.js App Router pages
-├── components/       # Reusable UI component library
-├── lib/              # Core utilities, formulas & types
-├── services/         # Client-side API integration services
-├── agents/           # Bedrock Career Agent schemas & tool handlers
-├── database/         # DynamoDB schemas, seed data & migrations
-├── infrastructure/   # AWS Cloud Development Kit (CDK) IaC
-├── tests/            # Unit, integration & security test suites
-├── scripts/          # Deployment and automation utilities
-└── docs/             # Authoritative design & architecture specifications
-```
+All development is strictly governed by the following authoritative documentation:
+
+| Document | Purpose |
+|---|---|
+| [`docs/product-spec.md`](docs/product-spec.md) | Product specification, core loop, and scoring formulas |
+| [`docs/architecture.md`](docs/architecture.md) | AWS infrastructure topology, data pipelines, and dataset licensing |
+| [`docs/database-design.md`](docs/database-design.md) | DynamoDB Single-Table schema and composite access patterns |
+| [`docs/security-model.md`](docs/security-model.md) | Least-privilege IAM matrix, tenant isolation, and prompt defenses |
+| [`docs/agent-rules.md`](docs/agent-rules.md) | Coding agent operating invariants and 7-step loop |
+| [`docs/agent-log.md`](docs/agent-log.md) | Chronological engineering log across Days 1–13 |
+| [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md) | AWS CLI v2 proof and live endpoint response |
+| [`docs/testing.md`](docs/testing.md) | 11-point security & tenant isolation audit report |
+| [`docs/deployment.md`](docs/deployment.md) | Production runbook, feature freeze notice, and incognito verification |
+| [`docs/demo-script.md`](docs/demo-script.md) | 90-second and 3-minute hackathon presentation scripts |
+| [`docs/hackathon-submission.md`](docs/hackathon-submission.md) | Official Builder Center submission metadata and impact story |
 
 ---
 
@@ -86,9 +99,21 @@ skillgraph/
    ```bash
    npm install
    ```
-3. **Synthesize AWS Infrastructure:**
+3. **Run the 11-point Automated Security Test Suite:**
    ```bash
-   cd infrastructure && npx cdk synth
+   npx tsx scripts/run-security-tests.ts
+   ```
+4. **Build & run the Next.js production web app:**
+   ```bash
+   npm run build
+   npm start
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+5. **Synthesize the AWS CDK Infrastructure:**
+   ```bash
+   cd infrastructure
+   npx cdk synth
    ```
 
 ---
