@@ -1,0 +1,1297 @@
+Yes. **Let's commit to SkillGraph—but build it as a serious career-intelligence product, not a resume chatbot.**
+
+I checked the current AWS Zero to Shipped page rather than relying only on the text you pasted. The hackathon is live **September 18–October 2, 2026**, and the exact requirements you listed are confirmed: AWS-connected coding agent with proof, live AWS application/public URL, original project, category + lane tags, and documentation of the development process. The ship gate is explicitly pass/fail. ([AWS Builder Center][1])
+
+I also checked current AWS Builder Center activity. AWS is heavily emphasizing **agentic AI, Amazon Bedrock, AWS Lambda, Kiro, serverless and AI agents**, which fits the direction we're taking. ([AWS Builder Center][2])
+
+So here's the plan.
+
+# 🚀 SKILLGRAPH
+
+### **Your career is not a résumé. It's a continuously changing skill graph.**
+
+**Tag:** `#commercial-potential`
+**Lane:** `#startup`
+
+We will build a platform that answers one fundamental question:
+
+> **"Given what I can actually prove today and what the market is asking for, what should I do next?"**
+
+Not:
+
+> "What career should I choose?"
+
+Not:
+
+> "Here are 10 courses you might like."
+
+But:
+
+> **"Here is the measurable gap between you and your target role, the evidence behind that gap, and the shortest practical path to close it."**
+
+---
+
+# 1. What the finished product looks like
+
+When I open SkillGraph, I should immediately see:
+
+```text
+┌──────────────────────────────────────────────────────┐
+│ SKILLGRAPH                              🔔  SOMNATH  │
+├──────────────────────────────────────────────────────┤
+│                                                      │
+│  YOUR CAREER INTELLIGENCE                            │
+│                                                      │
+│  Target: Cloud Security Engineer                     │
+│                                                      │
+│  Career Readiness                                    │
+│                                                      │
+│              68%                                     │
+│         ███████████████░░░░                          │
+│                                                      │
+│  Market Alignment          74%                       │
+│  Evidence Strength         61%                       │
+│  Skill Coverage            72%                       │
+│                                                      │
+│  ────────────────────────────────────────────────    │
+│                                                      │
+│  ⚠ 4 critical skill gaps                            │
+│  ↑ 3 skills increasing in market demand             │
+│  ✓ 7 skills strongly supported by evidence           │
+│                                                      │
+│       [ View Career Graph ]                           │
+│                                                      │
+└──────────────────────────────────────────────────────┘
+```
+
+That is our home screen.
+
+---
+
+# 2. The Skill Graph
+
+This is the heart of the product.
+
+Suppose the user wants:
+
+**Cloud Security Engineer**
+
+SkillGraph builds:
+
+```text
+                 CLOUD SECURITY ENGINEER
+                           │
+          ┌────────────────┼────────────────┐
+          │                │                │
+       CLOUD            SECURITY         ENGINEERING
+          │                │                │
+     ┌────┼────┐       ┌───┼────┐       ┌───┼────┐
+     │    │    │       │   │    │       │   │    │
+    AWS  IAM  IaC     SIEM IAM  SOC    Python Linux Docker
+     │    │    │
+     │    │    └── Terraform
+     │    │
+     │    └──── Identity
+     │
+     └──────── Security Services
+```
+
+Each node has:
+
+* skill level
+* market demand
+* evidence
+* confidence
+* dependencies
+* learning resources
+* project opportunities
+* trend
+
+So "AWS" isn't simply a number.
+
+It's a **network of capabilities**.
+
+---
+
+# 3. The killer feature: Evidence
+
+This is where SkillGraph becomes different.
+
+A user says:
+
+> "I know Python."
+
+The system asks:
+
+### What proves it?
+
+It can use authorized evidence such as:
+
+* résumé
+* GitHub repositories
+* projects
+* certifications
+* courses
+* assessments
+* manually added experience
+
+Then:
+
+```text
+PYTHON
+
+Self reported:       Advanced
+
+Evidence:
+✓ 8 repositories
+✓ 2 substantial projects
+✓ Python testing detected
+✓ API development detected
+✓ 1 certification
+
+Evidence strength:
+82%
+
+Assessment:
+Strong
+```
+
+Compare that with:
+
+```text
+KUBERNETES
+
+Self reported:       Intermediate
+
+Evidence:
+✗ No repositories
+✗ No projects
+✗ No certification
+✗ No demonstrated deployment
+
+Evidence strength:
+17%
+
+Assessment:
+Insufficient evidence
+```
+
+This gives us an important philosophy:
+
+# **SkillGraph measures what you can demonstrate, not merely what you claim.**
+
+---
+
+# 4. GitHub Intelligence
+
+This is one of our most impressive features.
+
+User connects GitHub.
+
+The platform analyzes authorized repositories.
+
+Not just:
+
+> "This repo uses Python."
+
+It can extract signals such as:
+
+```text
+Repository
+    │
+    ├── Languages
+    ├── Frameworks
+    ├── Cloud services
+    ├── APIs
+    ├── Databases
+    ├── Infrastructure
+    ├── Testing
+    ├── CI/CD
+    ├── Documentation
+    └── Security practices
+```
+
+Example:
+
+```text
+PROJECT
+IoT Security Platform
+
+Detected evidence
+
+Python             ██████████
+AWS                ████████
+Docker             ██████
+REST APIs          ████████
+SQL                █████
+Terraform          ░░░░░░░░░░
+Testing            ████░░░░░░
+CI/CD              ██████░░░░
+```
+
+Then the graph updates automatically.
+
+---
+
+# 5. Job Market Intelligence
+
+Now we bring in the other half of the equation.
+
+Your skills tell us:
+
+> **Where you are.**
+
+The job market tells us:
+
+> **Where the market is going.**
+
+Pipeline:
+
+```text
+Job data
+   ↓
+Ingestion
+   ↓
+Skill extraction
+   ↓
+Skill normalization
+   ↓
+Skill graph
+   ↓
+Demand/trend calculation
+```
+
+Example:
+
+```text
+Cloud Security Engineer
+
+AWS IAM          73%
+Terraform        61%
+Python           58%
+Docker           42%
+Kubernetes       39%
+SIEM             35%
+```
+
+Then compare that against the user's evidence.
+
+---
+
+# 6. Market Radar
+
+This becomes a beautiful page.
+
+```text
+MARKET RADAR
+
+Skill               Demand     Trend
+
+AWS IAM             ████████   ↑
+Terraform           ███████    ↑↑
+Kubernetes          ██████     →
+Python              ████████   →
+SIEM                █████      ↑
+Docker              ██████     →
+```
+
+But we need to be careful about the data source and licensing.
+
+**We will not scrape random websites recklessly.**
+
+For the hackathon MVP, we can use legally accessible/public job data or a curated dataset, clearly document the source, and build the ingestion architecture so additional licensed sources can be added later.
+
+---
+
+# 7. Career Gap Engine
+
+Now the magic.
+
+User:
+
+> Target: Cloud Security Engineer
+
+SkillGraph calculates:
+
+```text
+YOUR GAP
+
+                 YOU       MARKET
+
+AWS              78%       91%
+IAM              31%       82%
+Terraform         9%       61%
+SIEM             18%       65%
+Docker            62%       55%
+Python            81%       70%
+```
+
+But we don't just sort the gaps.
+
+We calculate **dependencies and leverage**.
+
+For example:
+
+```text
+Terraform
+   ↓
+AWS infrastructure
+   ↓
+Security infrastructure
+   ↓
+Cloud Security projects
+```
+
+Therefore Terraform could unlock multiple downstream skills.
+
+---
+
+# 8. The "What should I do next?" engine
+
+This is the feature I want in the demo.
+
+User:
+
+> **"I have 8 hours/week. What should I do for the next 30 days?"**
+
+SkillGraph considers:
+
+* current skill evidence
+* target role
+* market requirements
+* dependencies
+* time available
+* existing projects
+* learning progress
+
+And produces:
+
+```text
+30-DAY CAREER SPRINT
+
+WEEK 1
+Learn:
+AWS IAM fundamentals
+
+WEEK 2
+Build:
+Least-privilege AWS architecture
+
+WEEK 3
+Build:
+Terraform infrastructure
+
+WEEK 4
+Prove:
+Deploy + document + test
+
+Expected outcome:
+
+✓ IAM evidence
+✓ AWS evidence
+✓ Terraform evidence
+✓ Portfolio project
+```
+
+This is much more valuable than:
+
+> "Take a Terraform course."
+
+---
+
+# 9. Learn → Build → Prove
+
+This becomes our product philosophy.
+
+```text
+             LEARN
+               │
+               ▼
+             BUILD
+               │
+               ▼
+             PROVE
+               │
+               ▼
+            UPDATE
+               │
+               ▼
+         SKILL GRAPH
+               │
+               ▼
+        NEXT OPPORTUNITY
+```
+
+Every completed project changes the user's graph.
+
+Every new skill changes the recommended path.
+
+Every market change can change the recommended path.
+
+That's why this needs a cloud backend.
+
+---
+
+# 10. Career Agent
+
+Now we introduce AI.
+
+Not:
+
+> "ChatGPT but career advice."
+
+Instead:
+
+# **SkillGraph Career Agent**
+
+The agent has tools.
+
+```text
+                    CAREER AGENT
+                         │
+          ┌──────────────┼──────────────┐
+          ▼              ▼              ▼
+    Skill Graph      Evidence Tool   Market Tool
+          │              │              │
+          └──────────────┼──────────────┘
+                         ▼
+                  Planning Engine
+                         │
+                         ▼
+                 Personalized Plan
+```
+
+User:
+
+> "Why am I not ready for this role?"
+
+Agent investigates:
+
+```text
+Target role
+      ↓
+Required skills
+      ↓
+User skill graph
+      ↓
+Evidence
+      ↓
+Market data
+      ↓
+Gap analysis
+```
+
+Then responds with evidence-backed reasoning.
+
+---
+
+# 11. AWS architecture
+
+Here's where we make the project genuinely AWS-native.
+
+```text
+                         USER
+                           │
+                           ▼
+                    NEXT.JS APPLICATION
+                           │
+                           ▼
+                       COGNITO
+                           │
+                           ▼
+                      API GATEWAY
+                           │
+              ┌────────────┼────────────┐
+              ▼            ▼            ▼
+          PROFILE      SKILL ENGINE   JOB ENGINE
+              │            │            │
+              └────────────┼────────────┘
+                           ▼
+                       DYNAMODB
+                           │
+               ┌───────────┼───────────┐
+               ▼           ▼           ▼
+              S3        Search       Graph data
+               │
+               ▼
+         DOCUMENT PROCESSING
+               │
+               ▼
+          AMAZON BEDROCK
+               │
+       ┌───────┼────────┐
+       ▼       ▼        ▼
+   Extract   Reason   Generate
+    Skills   Gaps     Plans
+               │
+               ▼
+          CAREER AGENT
+```
+
+Then asynchronous processing:
+
+```text
+GitHub / Job data
+       ↓
+   EventBridge
+       ↓
+      SQS
+       ↓
+     Lambda
+       ↓
+   Processing
+       ↓
+    DynamoDB
+```
+
+Monitoring:
+
+```text
+Everything
+    ↓
+CloudWatch
+    ↓
+Logs
+Metrics
+Errors
+Alerts
+```
+
+We will **not** use an AWS service just to make the architecture diagram larger. Every service needs a job.
+
+---
+
+# 12. Why AWS actually matters
+
+This is crucial for our pitch.
+
+If a judge asks:
+
+> **"Why AWS?"**
+
+We should not answer:
+
+> "Because the hackathon required AWS."
+
+We answer:
+
+> **"SkillGraph continuously processes changing market data, user evidence, documents, and AI workflows. AWS gives us the event-driven infrastructure, secure identity, durable storage, asynchronous processing, observability and AI foundation required to keep a user's career graph continuously updated."**
+
+That's a real answer.
+
+---
+
+# 13. Multi-tenant SaaS from day one
+
+We shouldn't build:
+
+```text
+one user → one database
+```
+
+Build:
+
+```text
+Organization
+   │
+   ├── Users
+   ├── Career programs
+   ├── Skills
+   ├── Evidence
+   └── Analytics
+```
+
+Because eventually:
+
+### Universities
+
+could use SkillGraph for:
+
+```text
+Student
+ ↓
+Skills
+ ↓
+Job readiness
+ ↓
+Skill gaps
+ ↓
+Placement preparation
+```
+
+### Companies
+
+could use it for:
+
+```text
+Employee
+ ↓
+Current skills
+ ↓
+Role requirements
+ ↓
+Skill gaps
+ ↓
+Internal upskilling
+```
+
+### Individuals
+
+use:
+
+```text
+Career
+ ↓
+Skill graph
+ ↓
+Roadmap
+```
+
+Now we have a plausible SaaS expansion.
+
+---
+
+# 14. Three user modes
+
+## Individual
+
+```text
+MY CAREER
+MY SKILLS
+MY EVIDENCE
+MY GAPS
+MY ROADMAP
+MY PROJECTS
+```
+
+## University
+
+```text
+STUDENT COHORTS
+SKILL GAPS
+ROLE READINESS
+EMPLOYABILITY TRENDS
+```
+
+## Company
+
+```text
+TEAM SKILLS
+ROLE GAPS
+UPSKILLING
+INTERNAL MOBILITY
+```
+
+**But for the hackathon MVP, we only build Individual + a lightweight demo of institutional analytics.**
+
+Do not attempt to build three products in 13 days.
+
+---
+
+# 15. Our MVP
+
+This is extremely important.
+
+We have approximately **13 days until October 2**.
+
+So the actual MVP should contain:
+
+### Must have
+
+* Landing page
+* Authentication
+* User profile
+* Target role selection
+* Skill graph
+* Resume upload
+* Resume skill extraction
+* GitHub connection
+* GitHub evidence analysis
+* Job-market dataset
+* Market skill analysis
+* Career gap engine
+* Personalized roadmap
+* AI Career Agent
+* Dashboard
+* AWS production deployment
+
+### Nice to have
+
+* Certifications
+* Learning integrations
+* Progress tracking
+* PDF career report
+* university dashboard
+
+### Absolutely not for v1
+
+* Mobile app
+* complicated social network
+* job application automation
+* full LMS
+* recruiter marketplace
+* payment system
+* dozens of integrations
+
+**Depth beats feature count.**
+
+---
+
+# 16. The demo
+
+Our pitch should start with a person.
+
+Not AWS.
+
+Not AI.
+
+Not architecture.
+
+### Opening
+
+> **"The job market changes faster than most people can update their careers."**
+
+Then:
+
+> "A student can spend six months learning skills that employers have already stopped prioritizing — while completely missing the skills employers are actually asking for."
+
+Then open SkillGraph.
+
+---
+
+# 17. The live demo
+
+### Step 1
+
+Create user.
+
+```text
+Target role:
+Cloud Security Engineer
+```
+
+---
+
+### Step 2
+
+Upload résumé.
+
+AI extracts:
+
+```text
+Python
+Linux
+Networking
+AWS
+IoT
+Cybersecurity
+```
+
+---
+
+### Step 3
+
+Connect GitHub.
+
+SkillGraph finds:
+
+```text
+AWS
+Python
+Docker
+REST APIs
+IoT
+```
+
+---
+
+### Step 4
+
+Show the graph.
+
+```text
+Strong:
+Python
+Linux
+
+Moderate:
+AWS
+Docker
+
+Weak:
+IAM
+Terraform
+SIEM
+```
+
+---
+
+### Step 5
+
+Show market intelligence.
+
+```text
+TARGET ROLE
+
+IAM        HIGH DEMAND
+Terraform  HIGH DEMAND
+SIEM       MEDIUM/HIGH
+AWS        VERY HIGH
+```
+
+---
+
+### Step 6
+
+Click:
+
+# **Why am I not ready?**
+
+AI explains:
+
+> "Your strongest evidence is in Python, Linux and AWS development. The largest gaps for this target role are IAM, Terraform and security monitoring. Terraform has additional value because it supports infrastructure automation skills required across several related roles."
+
+---
+
+### Step 7
+
+Click:
+
+# **Build my 30-day plan**
+
+And:
+
+```text
+WEEK 1
+IAM
+
+WEEK 2
+AWS security monitoring
+
+WEEK 3
+Terraform
+
+WEEK 4
+Build:
+Cloud Security Monitoring Platform
+```
+
+---
+
+### Step 8
+
+Ask:
+
+> **"What happens if I only have 5 hours per week?"**
+
+Agent recalculates the roadmap.
+
+That's the **wow moment**.
+
+The system isn't just displaying AI-generated text.
+
+It is reasoning from the user's **actual graph + evidence + target + constraints**.
+
+---
+
+# 18. The final pitch
+
+Don't end with:
+
+> "Thanks for watching."
+
+End with:
+
+> **"LinkedIn tells you what jobs exist. Courses tell you what you can learn. Résumé scanners tell you what's missing. SkillGraph connects all three — and turns the gap into a plan you can actually execute."**
+
+Then:
+
+# **SKILLGRAPH**
+
+### *Don't guess your next career move. Measure it.*
+
+And immediately show:
+
+**LIVE ON AWS**
+
+with the public URL.
+
+That ties directly into the hackathon's ship gate. ([AWS Builder Center][1])
+
+---
+
+# 19. The development process is part of the product story
+
+This hackathon specifically requires documented proof that the coding agent was connected to AWS and asks the project to show how the agent helped ship it. ([AWS Builder Center][1])
+
+So from **day one**, we maintain:
+
+```text
+/docs
+
+01-product-spec.md
+02-architecture.md
+03-database-design.md
+04-security-model.md
+05-agent-development-log.md
+06-aws-connection-proof.md
+07-testing.md
+08-deployment.md
+09-demo-script.md
+10-hackathon-submission.md
+```
+
+And every coding-agent task follows:
+
+```text
+REQUIREMENT
+     ↓
+AGENT PLAN
+     ↓
+IMPLEMENTATION
+     ↓
+TEST
+     ↓
+HUMAN REVIEW
+     ↓
+COMMIT
+     ↓
+DEPLOY
+```
+
+Not:
+
+> "Build the whole app."
+
+---
+
+# 20. Our GitHub repository
+
+I want the repository to look like an actual product.
+
+```text
+skillgraph/
+│
+├── app/
+├── components/
+├── lib/
+├── services/
+├── agents/
+├── database/
+├── infrastructure/
+├── tests/
+├── scripts/
+│
+├── docs/
+│   ├── product-spec.md
+│   ├── architecture.md
+│   ├── aws-architecture.md
+│   ├── security.md
+│   ├── agent-log.md
+│   ├── testing.md
+│   └── deployment.md
+│
+├── README.md
+├── CONTRIBUTING.md
+└── LICENSE
+```
+
+---
+
+# 21. Our 13-day execution plan
+
+## **DAY 1 — Product + architecture**
+
+No feature coding.
+
+Create:
+
+* product specification
+* user journeys
+* data model
+* AWS architecture
+* UI map
+* security model
+* agent workflow
+
+---
+
+## **DAY 2 — AWS foundation**
+
+Set up:
+
+* AWS account/environment
+* coding-agent connection
+* IAM
+* repository
+* infrastructure
+* authentication
+* initial deployment
+
+### Goal:
+
+**Public "Hello SkillGraph" deployment.**
+
+We already pass the basic live-infrastructure milestone early.
+
+---
+
+## **DAY 3 — Application foundation**
+
+Build:
+
+* landing
+* authentication
+* dashboard
+* profile
+* navigation
+* target-role selection
+
+Deploy.
+
+---
+
+## **DAY 4 — Skill Graph**
+
+Build:
+
+* skill schema
+* skill relationships
+* skill visualization
+* skill confidence
+* evidence model
+
+---
+
+## **DAY 5 — Resume Intelligence**
+
+Build:
+
+```text
+Upload
+ ↓
+S3
+ ↓
+Processing
+ ↓
+Bedrock
+ ↓
+Skill extraction
+ ↓
+Skill graph
+```
+
+---
+
+## **DAY 6 — GitHub Intelligence**
+
+Build:
+
+```text
+GitHub
+ ↓
+Authorized repositories
+ ↓
+Repository analysis
+ ↓
+Evidence extraction
+ ↓
+Skill graph update
+```
+
+---
+
+## **DAY 7 — Market Intelligence**
+
+Build:
+
+```text
+Job dataset
+ ↓
+Skill extraction
+ ↓
+Normalization
+ ↓
+Market demand
+ ↓
+Trend
+```
+
+---
+
+## **DAY 8 — Gap Engine**
+
+Build:
+
+```text
+User graph
+      +
+Market graph
+      +
+Target role
+      ↓
+Career gap
+```
+
+---
+
+## **DAY 9 — Roadmap Engine**
+
+Build:
+
+```text
+Gap
+ ↓
+Dependencies
+ ↓
+Learning
+ ↓
+Project
+ ↓
+Evidence
+ ↓
+30/60/90 day plan
+```
+
+---
+
+## **DAY 10 — Career Agent**
+
+Build:
+
+```text
+User
+ ↓
+Agent
+ ↓
+SkillGraph tools
+ ↓
+Market tools
+ ↓
+Evidence tools
+ ↓
+Personalized answer
+```
+
+---
+
+## **DAY 11 — Security + testing**
+
+Attack our own application.
+
+Test:
+
+* authentication
+* authorization
+* data isolation
+* GitHub permissions
+* file uploads
+* prompt injection
+* AI hallucination
+* API security
+* invalid input
+* rate limits
+* error handling
+
+---
+
+## **DAY 12 — Production**
+
+Freeze functionality.
+
+Then:
+
+```text
+Production AWS
+ ↓
+HTTPS
+ ↓
+Public URL
+ ↓
+Clean browser
+ ↓
+Demo account
+ ↓
+Monitoring
+```
+
+---
+
+## **DAY 13 — Pitch + submission**
+
+No major new features.
+
+We create:
+
+* 90-second demo
+* 3-minute extended demo
+* README
+* architecture diagram
+* AWS proof
+* coding-agent evidence
+* screenshots
+* impact story
+* product story
+* Builder Center submission
+* category tag
+* lane tag
+
+And submit **before the final hours**.
+
+---
+
+# 22. One thing I want to change from your "million-dollar" idea
+
+We absolutely should **build as if this could become a million-dollar company**.
+
+But we shouldn't pretend we can guarantee first place.
+
+The competition explicitly says five winners are selected after the judging rounds; nobody can honestly guarantee that outcome. ([AWS Builder Center][1])
+
+What we *can* do is deliberately optimize every controllable component:
+
+```text
+                    SKILLGRAPH
+                        │
+        ┌───────────────┼────────────────┐
+        ▼               ▼                ▼
+      PRODUCT         AWS              STORY
+        │               │                │
+     Useful         Necessary         Memorable
+        │               │                │
+        └───────────────┼────────────────┘
+                        ▼
+                    LIVE APP
+                        │
+                        ▼
+                  STRONG SUBMISSION
+```
+
+And importantly, **we're not going to burn the next 13 days trying to build 100 features.**
+
+We're going to make **one core loop ridiculously good**:
+
+# **Understand me → understand the market → find my gap → tell me what to do → prove that I improved.**
+
+That is the product.
+
+---
+
+# 🚨 Our first action
+
+**Do not open VS Code and tell the coding agent to build SkillGraph yet.**
+
+First we need to create the **SkillGraph Master Specification v1**.
+
+That specification will become the single source of truth for the coding agent and will prevent exactly the hallucination/chaos problem you had with your previous Java project.
+
+The first agent instruction will eventually look like:
+
+> **"You are working on SkillGraph. Do not invent requirements. Read `/docs/product-spec.md`, `/docs/architecture.md`, and `/docs/agent-rules.md` before modifying the codebase. Implement only the requested task. Do not change architecture, dependencies, database schema, authentication, or AWS resources unless explicitly authorized. After implementation, run the specified tests and report exactly what changed."**
+
+Then we'll build **one vertical slice at a time**, deploy continuously, and keep the public AWS application alive throughout the hackathon.
+
+That is how I'd approach this if the objective is **not just to submit a project, but to submit something that looks like the first version of a real company.**
+
+[1]: https://builder.aws.com/build/hackathons/e83e84e5-4f4c-383b-bbe9-4a15ac195d55/zero-to-shipped?utm_source=chatgpt.com "Zero to Shipped | AWS Builder Center"
+[2]: https://builder.aws.com/?trk=61b8af3d-aa07-438d-b99e-55cdb524dc02&utm_source=chatgpt.com "AWS Builder Center"
