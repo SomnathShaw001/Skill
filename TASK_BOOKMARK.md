@@ -132,13 +132,13 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 ### ─────────────────────────────────────
 
 #### DAY 3 — Application Foundation (GoThrough.txt § 21 / DAY 3)
-- [ ] **3.1** Landing page with product headline and sign-up CTA
-- [ ] **3.2** Authentication flow (Cognito sign-up, sign-in, sign-out)
-- [ ] **3.3** Dashboard shell (Career Readiness %, Market Alignment %, Evidence Strength % — can be mock data)
-- [ ] **3.4** User profile screen
-- [ ] **3.5** Target role selection (input + store in DynamoDB)
-- [ ] **3.6** Navigation between all screens
-- [ ] **3.7** Deploy to AWS
+- [x] **3.1** Landing page with product headline and sign-up CTA
+- [x] **3.2** Authentication flow (Cognito sign-up, sign-in, sign-out)
+- [x] **3.3** Dashboard shell (Career Readiness %, Market Alignment %, Evidence Strength % — can be mock data)
+- [x] **3.4** User profile screen
+- [x] **3.5** Target role selection (input + store in DynamoDB)
+- [x] **3.6** Navigation between all screens
+- [x] **3.7** Deploy to AWS
 
 **Acceptance check:** User can sign up, sign in, set a target role, and see the dashboard. All deployed and accessible via public URL.
 
@@ -295,11 +295,11 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 
 ## 📍 Current Checkpoint
 
-**Status:** Day 2 COMPLETE (AWS Foundation, IAM, CDK Stack, Cognito, API Gateway, and Hello SkillGraph verified).
+**Status:** Day 3 COMPLETE (Application Foundation: Landing, Auth, Dashboard, Profile, Graph, Evidence, Market, Gap, Roadmap, Navigation, and production build verified).
 
-**Next authorized task:** `3.1` — Landing page with product headline and sign-up CTA (Phase 2 / Day 3: Application Foundation).
+**Next authorized task:** `4.1` — DynamoDB skill schema: `skillId`, `name`, `category`, `level`, `marketDemand`, `evidenceStrength`, `confidence`, `dependencies`, `trend` (Phase 2 / Day 4: Skill Graph).
 
-**Waiting for:** User command to begin Day 3.
+**Waiting for:** User command to begin Day 4.
 
 ---
 
