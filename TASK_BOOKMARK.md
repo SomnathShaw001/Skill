@@ -145,11 +145,11 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 ---
 
 #### DAY 4 — Skill Graph (GoThrough.txt § 21 / DAY 4 + §2, §3)
-- [ ] **4.1** DynamoDB skill schema: `skillId`, `name`, `category`, `level`, `marketDemand`, `evidenceStrength`, `confidence`, `dependencies`, `trend`
-- [ ] **4.2** Seed data: skills for "Cloud Security Engineer" target role (AWS, IAM, Terraform, SIEM, Docker, Python, Linux, Kubernetes)
-- [ ] **4.3** Skill graph visualization component (nodes + edges, evidence color-coded: Strong/Moderate/Weak/Insufficient)
-- [ ] **4.4** Evidence model: self-reported vs. evidence-backed confidence score
-- [ ] **4.5** Skill detail panel (shows evidence, market demand, confidence — see § 3 example)
+- [x] **4.1** DynamoDB skill schema: `skillId`, `name`, `category`, `level`, `marketDemand`, `evidenceStrength`, `confidence`, `dependencies`, `trend`
+- [x] **4.2** Seed data: skills for "Cloud Security Engineer" target role (AWS, IAM, Terraform, SIEM, Docker, Python, Linux, Kubernetes)
+- [x] **4.3** Skill graph visualization component (nodes + edges, evidence color-coded: Strong/Moderate/Weak/Insufficient)
+- [x] **4.4** Evidence model: self-reported vs. evidence-backed confidence score
+- [x] **4.5** Skill detail panel (shows evidence, market demand, confidence — see § 3 example)
 
 **Acceptance check:** User can see their skill graph. Clicking a skill shows its evidence and demand data. No hallucinated skills or data.
 
@@ -295,11 +295,11 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 
 ## 📍 Current Checkpoint
 
-**Status:** Day 3 COMPLETE (Application Foundation: Landing, Auth, Dashboard, Profile, Graph, Evidence, Market, Gap, Roadmap, Navigation, and production build verified).
+**Status:** Day 4 COMPLETE (Skill Graph: DynamoDB skill schema, seed skills, evidence & confidence model, interactive DAG visualizer, skill detail panel, production build verified).
 
-**Next authorized task:** `4.1` — DynamoDB skill schema: `skillId`, `name`, `category`, `level`, `marketDemand`, `evidenceStrength`, `confidence`, `dependencies`, `trend` (Phase 2 / Day 4: Skill Graph).
+**Next authorized task:** `5.1` — Resume upload UI component in `app/evidence/page.tsx` with drag-and-drop file validation (Phase 3 / Day 5: Resume Intelligence).
 
-**Waiting for:** User command to begin Day 4.
+**In Progress:** Phase 3 — Intelligence Engines (Day 5: Resume Intelligence).
 
 ---
 

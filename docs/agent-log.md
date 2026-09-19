@@ -235,5 +235,24 @@ Every log entry must adhere to the following schema:
 - **AWS Resources Involved:** AWS Cognito, Amazon Bedrock (agent interface), Amazon DynamoDB (data shape).
 - **Status:** COMPLETED.
 
+---
 
-
+### [2026-09-19 18:48 UTC] Day 4 Execution: The Skill Graph Engine & Evidence Model (Tasks 4.1 – 4.5)
+- **Goal:** Implement the DynamoDB skill entity schema, seed skill graph data for "Cloud Security Engineer", mathematical evidence and confidence calculator, interactive hierarchical DAG visualizer, and skill detail modal.
+- **Architectural Reference:** GoThrough.txt § 1, § 2, § 3, § 11, § 13, § 20, § 21 (Day 4).
+- **Files Created / Modified:**
+  - `database/skill-schema.ts` (Created — DynamoDB single-table skill entity, validation, and composite key builder)
+  - `database/seed-skills.json` (Created — 8 foundational skills for Cloud Security Engineer: AWS, IAM, Terraform, SIEM, Docker, Python, Linux, Kubernetes)
+  - `lib/evidence-calculator.ts` (Created — mathematical calculation of evidence strength and claim-vs-evidence confidence score)
+  - `components/SkillDetailModal.tsx` (Created — modal showing claim vs evidence strength, verified signal sources, downstream unlocks)
+  - `components/SkillGraphVisualizer.tsx` (Created — interactive SVG-based DAG graph renderer with category clustering and evidence color-coding)
+  - `app/graph/page.tsx` (Updated — integrated visualizer, interactive detail modal, filter tabs, and real-time confidence breakdown)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 4.1–4.5 complete)
+- **Key Technical Decisions:**
+  - Designed pure SVG DAG renderer without external D3/canvas dependencies to maintain lightweight bundle and SSR compatibility.
+  - Implemented exact GoThrough § 3 confidence algorithm: `(evidenceScore * 0.7) + (claimLevel * 10 * 0.3)`.
+  - Tiered confidence scores into: Strong (>=75, Emerald), Moderate (50-74, Blue), Weak (25-49, Amber), Insufficient (<25, Red).
+- **Verification & Testing:**
+  - Executed `npm run build`: Compiled cleanly in 1.6s with zero errors across all 13 routes.
+- **AWS Resources Involved:** Amazon DynamoDB (`SkillGraphTable`, composite key patterns).
+- **Status:** COMPLETED.
