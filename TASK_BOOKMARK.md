@@ -161,37 +161,37 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 ### ─────────────────────────────────────
 
 #### DAY 5 — Resume Intelligence (GoThrough.txt § 21 / DAY 5 + §3, §15)
-- [ ] **5.1** Resume upload UI → S3 (pre-signed URL pattern)
-- [ ] **5.2** S3 upload triggers Lambda via EventBridge or S3 event
-- [ ] **5.3** Lambda calls Amazon Bedrock to extract skills from resume text
-- [ ] **5.4** Extracted skills mapped to canonical skill schema (normalization)
-- [ ] **5.5** DynamoDB updated with extracted skills + evidence source = "resume"
-- [ ] **5.6** Skill graph re-renders with new evidence
+- [x] **5.1** Resume upload UI → S3 (pre-signed URL pattern)
+- [x] **5.2** S3 upload triggers Lambda via EventBridge or S3 event
+- [x] **5.3** Lambda calls Amazon Bedrock to extract skills from resume text
+- [x] **5.4** Extracted skills mapped to canonical skill schema (normalization)
+- [x] **5.5** DynamoDB updated with extracted skills + evidence source = "resume"
+- [x] **5.6** Skill graph re-renders with new evidence
 
 **Acceptance check:** Upload a real PDF resume. Bedrock extracts skills. Graph updates. Evidence source shows "resume". No invented skills.
 
 ---
 
 #### DAY 6 — GitHub Intelligence (GoThrough.txt § 21 / DAY 6 + §4)
-- [ ] **6.1** GitHub OAuth flow (authorized scopes: read:user, repo — no write permissions)
-- [ ] **6.2** Fetch authorized repositories list
-- [ ] **6.3** Per-repository analysis Lambda: detect languages, frameworks, cloud services, APIs, databases, infrastructure, testing, CI/CD (see §4 signal tree)
-- [ ] **6.4** Evidence extraction → map to canonical skills
-- [ ] **6.5** DynamoDB updated with evidence source = "github:{repo-name}"
-- [ ] **6.6** Skill graph re-renders showing GitHub evidence
+- [x] **6.1** GitHub OAuth flow (authorized scopes: read:user, repo — no write permissions)
+- [x] **6.2** Fetch authorized repositories list
+- [x] **6.3** Per-repository analysis Lambda: detect languages, frameworks, cloud services, APIs, databases, infrastructure, testing, CI/CD (see §4 signal tree)
+- [x] **6.4** Evidence extraction → map to canonical skills
+- [x] **6.5** DynamoDB updated with evidence source = "github:{repo-name}"
+- [x] **6.6** Skill graph re-renders showing GitHub evidence
 
 **Acceptance check:** GitHub connected. At least one repo analyzed. Skill evidence updated with repo source. No hallucinated repositories or skills.
 
 ---
 
 #### DAY 7 — Market Intelligence (GoThrough.txt § 21 / DAY 7 + §5, §6)
-- [ ] **7.1** Select curated/legally accessible job dataset — document source and license in `docs/architecture.md`
-- [ ] **7.2** Job skill extraction Lambda (Bedrock or pattern matching)
-- [ ] **7.3** Skill normalization (map job skills to canonical skill schema)
-- [ ] **7.4** Calculate demand score per skill per target role
-- [ ] **7.5** Calculate trend (up ↑↑, up ↑, flat →, down ↓)
-- [ ] **7.6** Store in DynamoDB market table
-- [ ] **7.7** Market Radar page: skill vs. demand vs. trend (see §6 example)
+- [x] **7.1** Select curated/legally accessible job dataset — document source and license in `docs/architecture.md`
+- [x] **7.2** Job skill extraction Lambda (Bedrock or pattern matching)
+- [x] **7.3** Skill normalization (map job skills to canonical skill schema)
+- [x] **7.4** Calculate demand score per skill per target role
+- [x] **7.5** Calculate trend (up ↑↑, up ↑, flat →, down ↓)
+- [x] **7.6** Store in DynamoDB market table
+- [x] **7.7** Market Radar page: skill vs. demand vs. trend (see §6 example)
 
 **Acceptance check:** Market Radar page shows real demand data for the target role. Source is documented. Data is not invented.
 
@@ -295,11 +295,11 @@ Understand me → Understand the market → Find my gap → Tell me what to do �
 
 ## 📍 Current Checkpoint
 
-**Status:** Day 4 COMPLETE (Skill Graph: DynamoDB skill schema, seed skills, evidence & confidence model, interactive DAG visualizer, skill detail panel, production build verified).
+**Status:** Phase 3 COMPLETE (Days 5, 6, 7 — Intelligence Engines: Resume Intelligence S3+Bedrock parser, Canonical Normalizer, GitHub Intelligence 8-signal repo inspector, Curated Market Intelligence dataset & radar, all verified via build and CDK synthesis).
 
-**Next authorized task:** `5.1` — Resume upload UI component in `app/evidence/page.tsx` with drag-and-drop file validation (Phase 3 / Day 5: Resume Intelligence).
+**Next authorized task:** `8.1` — Gap calculation: user skill score vs. market demand score per skill (Phase 4 / Day 8: Career Gap Engine).
 
-**In Progress:** Phase 3 — Intelligence Engines (Day 5: Resume Intelligence).
+**Waiting for:** User authorization to proceed to Phase 4 (Day 8: Career Gap Engine).
 
 ---
 

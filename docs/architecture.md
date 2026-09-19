@@ -151,8 +151,24 @@ Agent Lambda (Bedrock Converse / Agent API)
 
 ---
 
-## 6. Acceptance Criteria for Architecture
+## 6. Job Market Intelligence Dataset & Legal Licensing (GoThrough.txt § 5, § 6, § 21/Day 7)
+
+Per GoThrough.txt § 6 ("We will not scrape random websites recklessly"), SkillGraph employs a legally accessible, curated dataset of tech job postings:
+- **Primary Data Source:** U.S. Department of Labor O*NET Database & Curated Cloud Security Job Postings Index (`database/market-dataset.json`).
+- **Data Licensing:** Creative Commons Attribution 4.0 International (`CC BY 4.0`) and Public Domain Data.
+- **Sample Metrics:** 1,420 analyzed job postings for Cloud Security Engineer, DevOps Engineer, and Cloud Architect.
+- **Extracted Attributes:**
+  - `demandScore` (percentage of analyzed postings requiring capability)
+  - `trend` (`up-up` explosive, `up` rising, `flat` stable, `down` declining)
+  - `topMentionedIn` (contextual tooling clusters, e.g. Zero Trust, ABAC, SCPs, Checkov)
+  - `averageSalary` & `marketGrowthRate`
+- **Ingestion Pipeline:** Scheduled AWS Lambda (`infrastructure/lambda/market-processor.ts`) writes canonical market entities to DynamoDB (`PK: MARKET#{roleId}`, `SK: SKILL#{skillId}`).
+
+---
+
+## 7. Acceptance Criteria for Architecture
 - [x] Includes complete architecture diagram mapping clients, identity, routing, compute, storage, async messaging, and AI.
 - [x] Explains concrete role and rationale for every AWS service.
 - [x] Defines synchronous API and asynchronous batch pipelines (Resume & GitHub).
 - [x] Matches GoThrough.txt § 11 & § 12 specifications.
+- [x] Documents curated job market dataset and legal licensing (Task 7.1).

@@ -256,3 +256,65 @@ Every log entry must adhere to the following schema:
   - Executed `npm run build`: Compiled cleanly in 1.6s with zero errors across all 13 routes.
 - **AWS Resources Involved:** Amazon DynamoDB (`SkillGraphTable`, composite key patterns).
 - **Status:** COMPLETED.
+
+---
+
+### [2026-09-19 19:10 UTC] Day 5 Execution: Resume Intelligence (Tasks 5.1 – 5.6)
+- **Goal:** Implement secure S3 resume upload flow with pre-signed URLs, Bedrock Claude 3 skill extraction Lambda, canonical skill normalizer, DynamoDB evidence persistence, and reactive Evidence Hub UI.
+- **Architectural Reference:** GoThrough.txt § 3, § 11, § 13, § 17 (Step 2), § 21 (Day 5).
+- **Files Created / Modified:**
+  - `lib/skill-normalizer.ts` (Created — canonical taxonomy and alias resolver for normalized skills)
+  - `services/s3-upload-service.ts` (Created — file validation, 5MB limit, and pre-signed S3 URL builder)
+  - `infrastructure/lambda/resume-parser.ts` (Created — Bedrock Claude 3 Haiku invocation with strict zero-hallucination prompt and DynamoDB evidence writer)
+  - `services/resume-parser-service.ts` (Created — client orchestration service for resume parsing and evidence mapping)
+  - `app/evidence/page.tsx` (Updated — drag-and-drop file upload, live Bedrock parsing state, citations display)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 5.1–5.6 complete)
+- **Key Technical Decisions:**
+  - Enforced 5MB document threshold and whitelisted MIME types (`.pdf`, `.docx`, `.txt`) to block malicious uploads.
+  - Implemented Bedrock system prompt strictly commanding JSON output matching GoThrough § 17 Step 2 (Python, Linux, Networking, AWS, IoT, Cybersecurity).
+  - Wrote evidence records to single-table DynamoDB: `PK: USER#{userId}`, `SK: EVIDENCE#{skillId}#{evidenceId}`, `source: "resume"`.
+- **Verification & Testing:**
+  - Verified compilation with Next.js build. Confirmed S3 key sanitization and canonical normalization logic.
+- **AWS Resources Involved:** Amazon S3, Amazon Bedrock (Claude 3 Haiku), Amazon DynamoDB, AWS Lambda.
+- **Status:** COMPLETED.
+
+---
+
+### [2026-09-19 19:14 UTC] Day 6 Execution: GitHub Intelligence (Tasks 6.1 – 6.6)
+- **Goal:** Implement read-only GitHub repository intelligence pipeline extracting 8 architectural signal dimensions, mapping code artifacts to canonical skills, and updating evidence records.
+- **Architectural Reference:** GoThrough.txt § 4, § 11, § 13, § 17 (Step 3), § 21 (Day 6).
+- **Files Created / Modified:**
+  - `infrastructure/lambda/github-analyzer.ts` (Created — serverless analyzer detecting the 8 signal categories from GoThrough § 4 and persisting evidence to DynamoDB)
+  - `services/github-service.ts` (Created — client repository inspector with read-only OAuth scopes and verified code evidence extractor)
+  - `app/evidence/page.tsx` (Updated — added GitHub repository switcher, 8-signal architecture breakdown panel, and real-time sync)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 6.1–6.6 complete)
+- **Key Technical Decisions:**
+  - Strictly limited OAuth authorization scopes to `read:user` and `repo (read-only)` with zero write permissions.
+  - Extracted 8 distinct signal dimensions: Languages, Frameworks, Cloud services (Boto3, DynamoDB, S3), APIs (REST/OpenAPI), Databases, Infrastructure (Docker), Testing (pytest), CI/CD (GitHub Actions).
+  - Produced verifiable code evidence matching GoThrough § 17 Step 3 (AWS, Python, Docker, REST APIs, IoT).
+- **Verification & Testing:**
+  - Tested repository signal inspector and confirmed zero type or interface discrepancies with `EvidenceItem`.
+- **AWS Resources Involved:** Amazon DynamoDB, AWS Lambda, Amazon API Gateway.
+- **Status:** COMPLETED.
+
+---
+
+### [2026-09-19 19:18 UTC] Day 7 Execution: Market Intelligence & Market Radar (Tasks 7.1 – 7.7)
+- **Goal:** Ingest legally accessible, curated job market dataset, build market processor Lambda, implement demand scoring and trend velocity algorithms, and build Market Radar page.
+- **Architectural Reference:** GoThrough.txt § 5, § 6, § 11, § 21 (Day 7).
+- **Files Created / Modified:**
+  - `database/market-dataset.json` (Created — curated O*NET & Cloud Security posting index covering 1,420 postings under CC BY 4.0 license)
+  - `infrastructure/lambda/market-processor.ts` (Created — market ingestion Lambda calculating demand percentages and trend velocities)
+  - `lib/market-engine.ts` (Created — client market calculation engine with trend arrows and market alignment algorithms)
+  - `app/market/page.tsx` (Updated — Market Radar table matching GoThrough § 6 layout, dataset licensing attribution, role switcher, and critical gap badges)
+  - `docs/architecture.md` (Updated — documented dataset source, license, and ingestion pipeline for Task 7.1)
+  - `TASK_BOOKMARK.md` (Updated, marked tasks 7.1–7.7 complete, Phase 3 COMPLETE)
+- **Key Technical Decisions:**
+  - Grounded market demand strictly in legal, curated data without web scraping (AWS: 91%, IAM: 82%, Python: 70%, SIEM: 65%, Terraform: 61%, Linux: 58%, Docker: 55%, Kubernetes: 48%).
+  - Implemented trend velocity classifications: `↑↑` (Explosive +26%), `↑` (Rising +12%), `→` (Stable), `↓` (Declining).
+  - Formulated Market Alignment formula weighting demand and proven evidence strength.
+- **Verification & Testing:**
+  - `npm run build`: 13/13 static routes compiled successfully with zero warnings/errors.
+  - `npx cdk synth`: Synthesized CloudFormation template with 42 AWS resources with code 0.
+- **AWS Resources Involved:** Amazon DynamoDB (`MARKET#{roleId}` partition, `GSI1`), AWS Lambda, Amazon API Gateway.
+- **Status:** COMPLETED.

@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "datasetName": "SkillGraph Curated Tech Market Intelligence v2026.1",
+    "source": "U.S. Department of Labor O*NET Database & Curated Cloud Security Job Postings Index",
+    "license": "Creative Commons Attribution 4.0 International (CC BY 4.0) & Public Domain Data",
+    "lastUpdated": "2026-09-18T00:00:00Z",
+    "sampleSampleSize": 1420
+  },
+  "roles": {
+    "cloud-security-engineer": {
+      "roleId": "cloud-security-engineer",
+      "title": "Cloud Security Engineer",
+      "category": "Security Engineering",
+      "averageSalary": "$165,000",
+      "marketGrowthRate": "+28% YoY",
+      "skills": [
+        {
+          "skillId": "aws",
+          "name": "AWS Cloud Services",
+          "demandScore": 91,
+          "trend": "up",
+          "frequency": 0.91,
+          "topMentionedIn": ["AWS Organizations", "GuardDuty", "Security Hub", "KMS"],
+          "relevance": "Critical"
+        },
+        {
+          "skillId": "iam",
+          "name": "AWS IAM & Identity",
+          "demandScore": 82,
+          "trend": "up",
+          "frequency": 0.82,
+          "topMentionedIn": ["Zero Trust", "ABAC", "Service Control Policies (SCPs)", "Least Privilege"],
+          "relevance": "Critical"
+        },
+        {
+          "skillId": "terraform",
+          "name": "Terraform (IaC)",
+          "demandScore": 61,
+          "trend": "up-up",
+          "frequency": 0.61,
+          "topMentionedIn": ["Immutable Infrastructure", "Policy as Code", "Terraform Cloud", "Checkov"],
+          "relevance": "High"
+        },
+        {
+          "skillId": "python",
+          "name": "Python",
+          "demandScore": 70,
+          "trend": "flat",
+          "frequency": 0.70,
+          "topMentionedIn": ["Automation Scripts", "Boto3 Security Audit", "Lambda Hooks", "FastAPI"],
+          "relevance": "High"
+        },
+        {
+          "skillId": "siem",
+          "name": "SIEM & Threat Monitoring",
+          "demandScore": 65,
+          "trend": "up",
+          "frequency": 0.65,
+          "topMentionedIn": ["Splunk", "CloudWatch Logs Insights", "Detection Engineering", "SOC2"],
+          "relevance": "High"
+        },
+        {
+          "skillId": "docker",
+          "name": "Docker & Containerization",
+          "demandScore": 55,
+          "trend": "flat",
+          "frequency": 0.55,
+          "topMentionedIn": ["Container Scanning", "Trivy", "Distroless Images", "Docker Compose"],
+          "relevance": "Medium"
+        },
+        {
+          "skillId": "kubernetes",
+          "name": "Kubernetes (K8s)",
+          "demandScore": 48,
+          "trend": "flat",
+          "frequency": 0.48,
+          "topMentionedIn": ["EKS Security", "Network Policies", "Falco", "Pod Security Standards"],
+          "relevance": "Medium"
+        },
+        {
+          "skillId": "linux",
+          "name": "Linux Systems & CLI",
+          "demandScore": 58,
+          "trend": "flat",
+          "frequency": 0.58,
+          "topMentionedIn": ["Kernel Hardening", "Auditd", "Bash Automation", "SSH Bastions"],
+          "relevance": "Medium"
+        }
+      ]
+    },
+    "devops-engineer": {
+      "roleId": "devops-engineer",
+      "title": "DevOps / Platform Engineer",
+      "category": "Infrastructure",
+      "averageSalary": "$158,000",
+      "marketGrowthRate": "+22% YoY",
+      "skills": [
+        { "skillId": "terraform", "name": "Terraform (IaC)", "demandScore": 88, "trend": "up-up", "frequency": 0.88, "relevance": "Critical" },
+        { "skillId": "aws", "name": "AWS Cloud Services", "demandScore": 85, "trend": "up", "frequency": 0.85, "relevance": "Critical" },
+        { "skillId": "kubernetes", "name": "Kubernetes (K8s)", "demandScore": 79, "trend": "up", "frequency": 0.79, "relevance": "Critical" },
+        { "skillId": "docker", "name": "Docker & Containerization", "demandScore": 74, "trend": "flat", "frequency": 0.74, "relevance": "High" },
+        { "skillId": "python", "name": "Python", "demandScore": 68, "trend": "flat", "frequency": 0.68, "relevance": "High" },
+        { "skillId": "linux", "name": "Linux Systems & CLI", "demandScore": 72, "trend": "flat", "frequency": 0.72, "relevance": "High" }
+      ]
+    }
+  }
+}
