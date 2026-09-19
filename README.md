@@ -26,6 +26,8 @@ SkillGraph measures what you can **demonstrate**, not merely what you **claim**,
 
 - **Public HTTPS API & Health Endpoint:**  
   [`https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/`](https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/)
+- **GitHub Repository:**  
+  [`https://github.com/SomnathShaw001/Skill`](https://github.com/SomnathShaw001/Skill)
 - **AWS Connection Proof & CLI Verification:**  
   See [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md)
 - **Local Application URL:**  

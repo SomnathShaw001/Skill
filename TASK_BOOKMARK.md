@@ -360,12 +360,13 @@ skillgraph/
 
 Before every agent coding session, verify:
 
-- [ ] The agent has read `docs/product-spec.md`
-- [ ] The agent has read `docs/architecture.md`
-- [ ] The agent has read `docs/agent-rules.md`
-- [ ] The current task ID is written at the top of the agent's response (e.g., "Working on task 5.3")
-- [ ] The agent is not adding features not listed in the Must Have list
-- [ ] The agent is not changing DynamoDB schema without explicit authorization
-- [ ] The agent is not calling AWS services not listed in the Architecture Summary table
-- [ ] The Bedrock agent system prompt includes: "Only answer using data returned by your tools. Do not invent skills, evidence, or market data."
-- [ ] After implementation, the agent has run the acceptance check for the current task
+- [x] The agent has read `docs/product-spec.md`
+- [x] The agent has read `docs/architecture.md`
+- [x] The agent has read `docs/agent-rules.md`
+- [x] The current task ID is written at the top of the agent's response (e.g., "Working on task 5.3")
+- [x] The agent is not adding features not listed in the Must Have list
+- [x] The agent is not changing DynamoDB schema without explicit authorization
+- [x] The agent is not calling AWS services not listed in the Architecture Summary table
+- [x] The Bedrock agent system prompt includes: "Only answer using data returned by your tools. Do not invent skills, evidence, or market data."
+- [x] After implementation, the agent has run the acceptance check for the current task
+- [x] Codebase pushed and verified on GitHub: https://github.com/SomnathShaw001/Skill.git

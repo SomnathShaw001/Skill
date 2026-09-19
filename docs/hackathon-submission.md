@@ -25,7 +25,7 @@
 - **Public Application URL:** `https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/`
 - **Local Application:** `http://localhost:3000`
 - **AWS Coding Agent Used:** Antigravity AI Pair Programmer
-- **GitHub Repository:** Publicly available on branch `main` with full commit history from Day 1 to Day 13
+- **GitHub Repository:** [https://github.com/SomnathShaw001/Skill.git](https://github.com/SomnathShaw001/Skill.git)
 
 ---
 
