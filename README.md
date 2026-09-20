@@ -22,14 +22,14 @@ SkillGraph measures what you can **demonstrate**, not merely what you **claim**,
 
 ---
 
-## 🌐 Live AWS Cloud Deployments (100% HTTPS)
+## 🌐 Live AWS Cloud Deployments
 
-- 🚀 **Live Interactive Web Application (AWS Amplify — HTTPS):**  
-  [**`https://main.d1hqp9ms75d3aq.amplifyapp.com`**](https://main.d1hqp9ms75d3aq.amplifyapp.com)  
-  *(Full Next.js 15 interactive web application with verified SSL padlock on AWS: Skill Graph DAG, Bedrock Career Agent Chat, Market Radar, and 30-Day Sprint Roadmap)*
+- 🚀 **Live Interactive Web Application (Amazon S3 Website Hosting):**  
+  [**`http://skillgraph-app-430398381924.s3-website-us-east-1.amazonaws.com/`**](http://skillgraph-app-430398381924.s3-website-us-east-1.amazonaws.com/)  
+  *(Full Next.js 15 interactive web application: Skill Graph DAG, Bedrock Career Agent Chat, Market Radar, and 30-Day Sprint Roadmap)*
 - 🔒 **Live AWS Cloud REST API (Amazon API Gateway — HTTPS):**  
-  [`https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`](https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/)  
-  *(Regional HTTPS endpoint with Cognito Authorizer, rate throttling, and CloudFormation health status)*
+  [**`https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`**](https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/)  
+  *(Verified HTTPS cloud deployment endpoint with Cognito Authorizer, rate throttling, and CloudFormation health status)*
 - 💻 **GitHub Repository:**  
   [`https://github.com/SomnathShaw001/Skill`](https://github.com/SomnathShaw001/Skill)
 - ☁️ **AWS CloudFormation Stack:**  

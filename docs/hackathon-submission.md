@@ -22,7 +22,7 @@
 - **One-Liner:** *Don't guess your next career move. Measure it.*
 - **Category:** `#commercial-potential`
 - **Lane:** `#startup`
-- **Live Web Application (AWS Amplify — HTTPS):** [https://main.d1hqp9ms75d3aq.amplifyapp.com](https://main.d1hqp9ms75d3aq.amplifyapp.com)
+- **Live Web Application (Amazon S3 Website Hosting):** [http://skillgraph-app-430398381924.s3-website-us-east-1.amazonaws.com/](http://skillgraph-app-430398381924.s3-website-us-east-1.amazonaws.com/)
 - **Live AWS Cloud REST API (Amazon API Gateway — HTTPS):** `https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`
 - **AWS Coding Agent Used:** Antigravity AI Pair Programmer
 - **GitHub Repository:** [https://github.com/SomnathShaw001/Skill.git](https://github.com/SomnathShaw001/Skill.git)
