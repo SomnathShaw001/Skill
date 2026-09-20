@@ -22,16 +22,18 @@ SkillGraph measures what you can **demonstrate**, not merely what you **claim**,
 
 ---
 
-## 🌐 Application & Deployment
+## 🌐 Live AWS Cloud Deployments
 
-- **Web Application URL (Active & Live):**  
-  [**`http://localhost:3000`**](http://localhost:3000) (Next.js 15 Full Interactive UI)
-- **Live AWS Cloud API & Health Endpoint:**  
-  [`https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`](https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/)
-- **GitHub Repository:**  
+- 🚀 **Interactive Web Application (AWS S3 Hosted):**  
+  [**`http://skillgraph-app-430398381924.s3-website-us-east-1.amazonaws.com/`**](http://skillgraph-app-430398381924.s3-website-us-east-1.amazonaws.com/)  
+  *(Full Next.js 15 web application with Skill Graph DAG, Career Agent Chat, Market Radar, and 30-Day Sprint Roadmap)*
+- 🔒 **Live AWS API Gateway Endpoint (HTTPS with Browser Redirect):**  
+  [`https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`](https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/)  
+  *(SSL-secured endpoint; automatically routes browser visitors to the S3 web app, or returns raw CloudFormation JSON with `?format=json`)*
+- 💻 **GitHub Repository:**  
   [`https://github.com/SomnathShaw001/Skill`](https://github.com/SomnathShaw001/Skill)
-- **AWS CloudFormation Stack:**  
-  `SkillGraphStack` (Deployed to AWS account `430398381924` in `us-east-1`, see [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md))
+- ☁️ **AWS CloudFormation Stack:**  
+  `SkillGraphStack` (Deployed to AWS Account `430398381924` in `us-east-1`, see [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md))
 
 ---
 
@@ -53,14 +55,14 @@ Understand Me → Understand Market → Find Gap → Tell Me What to Do → Prov
 
 SkillGraph is built on a serverless, decoupled AWS infrastructure:
 
-- **Frontend:** Next.js 15 (App Router) + Pure Vanilla CSS design tokens (deep obsidian dark mode, glassmorphism)
-- **Authentication:** AWS Cognito (User Pools & JWT Verification)
-- **API Management:** Amazon API Gateway (REST API with Cognito Authorizer & Rate Throttling)
-- **Compute:** AWS Lambda (Node.js 20 ARM64 Microservices)
-- **Database:** Amazon DynamoDB (Single-Table Design: `SkillGraphTable`, `GSI1`)
-- **Storage:** Amazon S3 (Encrypted Document & Resume Ingestion Bucket)
-- **AI & Reasoning:** Amazon Bedrock (`anthropic.claude-3-haiku` with 3 grounded tools: `get_skill_graph`, `get_market_data`, `get_gap_analysis`)
-- **Observability:** Amazon CloudWatch (Logs, Metrics, Alarms)
+- **Frontend & Web Hosting:** Next.js 15 (Static Export) hosted natively on **Amazon S3 Website Hosting** (`skillgraph-app-430398381924`)
+- **API Management & HTTPS Gateway:** **Amazon API Gateway** (`SkillGraph-Api`) with Cognito Authorizer, rate throttling (100 req/sec, 200 burst), and HTTPS routing
+- **Compute:** **AWS Lambda** (Node.js 20 ARM64 Microservices) with least-privilege IAM roles
+- **AI & Reasoning:** **Amazon Bedrock** (`anthropic.claude-3-haiku` via Converse API) with strict tool schemas (`get_skill_graph`, `get_market_data`, `get_gap_analysis`)
+- **Database:** **Amazon DynamoDB** (Single-Table Design: `SkillGraphTable`, `GSI1`)
+- **Document Storage:** **Amazon S3** (`skillgraphstack-skillgraphdocumentbucket*`) with AES-256 encryption and pre-signed upload URLs
+- **Authentication:** **AWS Cognito** User Pool & Web Client (`skillgraph-user-pool`)
+- **Observability:** **Amazon CloudWatch** (Logs, Metrics, Alarms)
 
 ---
 
@@ -94,8 +96,8 @@ All development is strictly governed by the following authoritative documentatio
 ### Quickstart
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/somnath/skillgraph.git
-   cd skillgraph
+   git clone https://github.com/SomnathShaw001/Skill.git
+   cd Skill
    ```
 2. **Install dependencies:**
    ```bash
