@@ -24,9 +24,9 @@ As mandated by GoThrough.txt § 21 Day 12, all functional development is officia
 | **AI / Reasoning**| `Amazon Bedrock` | `anthropic.claude-3-haiku` / Converse API with tool grounding |
 | **Observability** | `CloudWatch Logs & Alarms` | Retention 30 days, latency metrics, error-rate alarms |
 
-**Public HTTPS Deployment URL:**
+**Public HTTPS Deployment URL (Live on AWS):**
 ```text
-https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/
+https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/
 ```
 
 ---

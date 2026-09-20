@@ -26,12 +26,12 @@ SkillGraph measures what you can **demonstrate**, not merely what you **claim**,
 
 - **Web Application URL (Active & Live):**  
   [**`http://localhost:3000`**](http://localhost:3000) (Next.js 15 Full Interactive UI)
+- **Live AWS Cloud API & Health Endpoint:**  
+  [`https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`](https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/)
 - **GitHub Repository:**  
   [`https://github.com/SomnathShaw001/Skill`](https://github.com/SomnathShaw001/Skill)
-- **AWS CDK CloudFormation Synthesis:**  
-  Synthesized into 42 resources in `infrastructure/lib/skillgraph-stack.ts` (see [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md))
-- **AWS Live Deploy Command:**  
-  `cd infrastructure && npx cdk deploy SkillGraphStack` (emits active AWS API Gateway endpoint)
+- **AWS CloudFormation Stack:**  
+  `SkillGraphStack` (Deployed to AWS account `430398381924` in `us-east-1`, see [`docs/aws-connection-proof.md`](docs/aws-connection-proof.md))
 
 ---
 

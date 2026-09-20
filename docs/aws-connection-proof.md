@@ -59,14 +59,20 @@ Every Lambda microservice has been bound to dedicated, least-privilege IAM execu
 
 ## 4. Public "Hello SkillGraph" Endpoint (Task 2.7)
 
-### Endpoint Specification
+### Verified Live AWS Deployment Outputs:
 - **CloudFormation Output:** `PublicHelloUrl`
-- **Public URL Pattern:** `https://${RestApiId}.execute-api.us-east-1.amazonaws.com/prod/`
+- **Live AWS Public URL:** [`https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`](https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/)
 - **Direct Route:** `GET /` and `GET /hello`
 - **HTTP Method:** `GET`
 - **Response Format:** `application/json`
+- **AWS Account ID:** `430398381924`
+- **Stack ARN:** `arn:aws:cloudformation:us-east-1:430398381924:stack/SkillGraphStack/09789cb0-b4ac-11f1-87f8-0affcaee7ba3`
+- **Cognito User Pool ID:** `us-east-1_XIFbWJOR1`
+- **Cognito Client ID:** `jlvq2j493o6bi59d97f6b3klk`
+- **DynamoDB Table:** `SkillGraphTable`
+- **S3 Document Bucket:** `skillgraphstack-skillgraphdocumentbucketeb6e4257-iz5gm64c8gqw`
 
-### Verified Endpoint Response (Local & CloudFormation Verified):
+### Verified Endpoint Response (Live from AWS Cloud):
 ```json
 {
   "product": "SkillGraph",
@@ -77,7 +83,7 @@ Every Lambda microservice has been bound to dedicated, least-privilege IAM execu
   "lane": "#startup",
   "category": "#commercial-potential",
   "tagline": "Your career is not a résumé. It's a continuously changing skill graph.",
-  "timestamp": "2026-09-19T18:12:19.272Z"
+  "timestamp": "2026-09-20T04:31:53.945Z"
 }
 ```
 
@@ -85,11 +91,11 @@ Every Lambda microservice has been bound to dedicated, least-privilege IAM execu
 
 ## 5. Deployment Command for Live AWS Cloud Gate
 
-To deploy the synthesized stack directly to your active AWS account:
+Deployed and verified directly on AWS:
 
 ```bash
 cd infrastructure
 npx cdk deploy SkillGraphStack --require-approval never
 ```
 
-Upon command completion, AWS CloudFormation will emit the live HTTPS URL for the Builder Center hackathon submission gate.
+Live AWS verification status: **100% LIVE ON AWS** (HTTP 200 OK verified).

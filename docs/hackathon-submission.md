@@ -23,9 +23,10 @@
 - **Category:** `#commercial-potential`
 - **Lane:** `#startup`
 - **Web Application URL:** `http://localhost:3000` (Local production server active)
+- **Live AWS Cloud API & Health Endpoint:** `https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`
 - **AWS Coding Agent Used:** Antigravity AI Pair Programmer
 - **GitHub Repository:** [https://github.com/SomnathShaw001/Skill.git](https://github.com/SomnathShaw001/Skill.git)
-- **AWS CDK CloudFormation Synthesis:** 42 resources synthesized (`npx cdk synth`) in `infrastructure/`
+- **AWS CloudFormation Stack:** `SkillGraphStack` (Deployed to AWS account `430398381924` in `us-east-1`)
 
 ---
 
