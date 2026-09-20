@@ -22,10 +22,10 @@
 - **One-Liner:** *Don't guess your next career move. Measure it.*
 - **Category:** `#commercial-potential`
 - **Lane:** `#startup`
-- **Public Application URL:** `https://9e2m5vkwk1.execute-api.us-east-1.amazonaws.com/prod/`
-- **Local Application:** `http://localhost:3000`
+- **Web Application URL:** `http://localhost:3000` (Local production server active)
 - **AWS Coding Agent Used:** Antigravity AI Pair Programmer
 - **GitHub Repository:** [https://github.com/SomnathShaw001/Skill.git](https://github.com/SomnathShaw001/Skill.git)
+- **AWS CDK CloudFormation Synthesis:** 42 resources synthesized (`npx cdk synth`) in `infrastructure/`
 
 ---
 
