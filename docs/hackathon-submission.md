@@ -22,8 +22,8 @@
 - **One-Liner:** *Don't guess your next career move. Measure it.*
 - **Category:** `#commercial-potential`
 - **Lane:** `#startup`
-- **Web Application URL:** `http://localhost:3000` (Local production server active)
-- **Live AWS Cloud API & Health Endpoint:** `https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`
+- **Live Web Application (AWS Amplify — HTTPS):** [https://main.d1hqp9ms75d3aq.amplifyapp.com](https://main.d1hqp9ms75d3aq.amplifyapp.com)
+- **Live AWS Cloud REST API (Amazon API Gateway — HTTPS):** `https://ilcjmegmml.execute-api.us-east-1.amazonaws.com/prod/`
 - **AWS Coding Agent Used:** Antigravity AI Pair Programmer
 - **GitHub Repository:** [https://github.com/SomnathShaw001/Skill.git](https://github.com/SomnathShaw001/Skill.git)
 - **AWS CloudFormation Stack:** `SkillGraphStack` (Deployed to AWS account `430398381924` in `us-east-1`)
